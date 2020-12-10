@@ -10,10 +10,6 @@ public class FirmashowViewModel extends ViewModel {
 
     public FirmashowViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("ИП Ковалёва Ю.С.\n" +
-                "инн 121524178574 огрнип 316121500063612\n" +
-                "Городская Инспекция Безопасности Дорожного Движения\n" +
-                "г.Йошкар-Ола, ул.Красноармейская, д.84а, офис 2.");
     }
 
     public LiveData<String> getText() {

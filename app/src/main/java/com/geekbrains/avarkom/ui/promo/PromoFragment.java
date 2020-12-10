@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,16 +27,8 @@ public class PromoFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        promoViewModel =
-                ViewModelProviders.of(this).get(PromoViewModel.class);
+        promoViewModel = ViewModelProviders.of(this).get(PromoViewModel.class);
         View root = inflater.inflate(R.layout.fragment_promo, container, false);
-        final TextView textView = root.findViewById(R.id.text_promo);
-        promoViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
         return root;
     }
 
