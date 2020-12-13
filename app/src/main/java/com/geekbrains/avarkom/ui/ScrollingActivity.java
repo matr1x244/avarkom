@@ -20,5 +20,6 @@ public class ScrollingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scrolling_promo);
         setContentView(R.layout.activity_scrolling_firma);
+        setContentView(R.layout.activity_scrolling_connect);
          }
 }

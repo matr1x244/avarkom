@@ -11,23 +11,20 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import com.geekbrains.avarkom.R;
+import com.geekbrains.avarkom.ui.promo.PromoFragment;
+import com.geekbrains.avarkom.ui.promo.PromoViewModel;
 
 public class ConnectFragment extends Fragment {
 
+    private static final String TAG = ConnectFragment.class.getSimpleName(); // TAG для логов
+    private final static boolean DEBAG = true; //включение DEBAGa для логов.
     private ConnectViewModel connectViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-            ViewGroup container, Bundle savedInstanceState) {
-        connectViewModel =
-                ViewModelProviders.of(this).get(ConnectViewModel.class);
+                             ViewGroup container, Bundle savedInstanceState) {
+        connectViewModel = ViewModelProviders.of(this).get(ConnectViewModel.class);
         View root = inflater.inflate(R.layout.fragment_connect, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
-        connectViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
         return root;
     }
+
 }
