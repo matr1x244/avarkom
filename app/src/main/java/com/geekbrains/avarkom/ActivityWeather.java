@@ -129,18 +129,7 @@ public class ActivityWeather extends AppCompatActivity {
             windSpeed.setText(String.format("%d", weatherRequest.getWind().getSpeed()));
         }
     };
-        public void btnWorld(View v) {
-            if (v.getId() == R.id.buttonWorld) {
-                Uri addres = Uri.parse("https://pogoda.turtella.ru/weathermap");
-                Intent Web = new Intent(Intent.ACTION_VIEW, addres);
-                Toast.makeText(this, "В браузер..", Toast.LENGTH_SHORT).show();
-                if (DEBAG) {
-                    Log.d(TAG, "buttonWorld");
-                    startActivity(Web);
-                }
-            }
-        }
-    }
+}
 
 
 
